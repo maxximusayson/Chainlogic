@@ -87,7 +87,7 @@
         </p>
         <div class="line"><span class="dot"></span></div>
       </div>
-      <img src="images/hm2.png" alt="Mathew Mat" class="avatar" />
+      <img src="images/r1.jpg" alt="Mathew Mat" class="avatar" />
     </div>
 
      <!-- Member Right -->
@@ -100,7 +100,7 @@
         </p>
         <div class="line align-right"><span class="dot"></span></div>
       </div>
-      <img src="images/hm2.png" alt="Mathew Mat" class="avatar" />
+      <img src="images/r2.jpg" alt="Mathew Mat" class="avatar" />
     </div>
   </div>
 
@@ -115,7 +115,7 @@
         </p>
         <div class="line"><span class="dot"></span></div>
       </div>
-      <img src="images/hm2.png" alt="Mathew Mat" class="avatar" />
+      <img src="images/r3.jpg" alt="Mathew Mat" class="avatar" />
     </div>
    
     <br><br><br><br>
@@ -129,7 +129,7 @@
         </p>
         <div class="line align-right"><span class="dot"></span></div>
       </div>
-      <img src="images/hm2.png" alt="Mathew Mat" class="avatar" />
+      <img src="images/r4.jpg" alt="Mathew Mat" class="avatar" />
     </div>
   </div>
 
