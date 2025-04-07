@@ -3,39 +3,95 @@ body {
     font-family: 'Teachers', sans-serif;
     margin: 0;
     padding: 0;
-  }
-  
-  nav {
+}
+
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 25px 100px;
     background-color: white;
-  }
-  
-  .logo {
-    font-size: 50px; 
+    position: relative;
+}
+
+.logo {
+    font-size: 50px;
     font-weight: 800;
     color: #00415A;
-  }
-  
-  .nav-links {
+}
+
+.nav-links {
     display: flex;
-    gap: 90px; 
-  }
-  
-  .nav-links a {
+    gap: 90px;
+}
+
+.nav-links a {
     text-decoration: none;
     color: #00415A;
     font-weight: 600;
-    font-size: 30px; 
+    font-size: 30px;
     transition: 0.2s ease-in-out;
-  }
-  
-  .nav-links a:hover {
+}
+
+.nav-links a:hover {
     text-decoration: underline;
-  }
-  
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+}
+
+/* Burger Menu Styles */
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.burger-menu span {
+    width: 30px;
+    height: 4px;
+    background-color: #00415A;
+    border-radius: 5px;
+}
+
+/* RESPONSIVE STYLES */
+@media screen and (max-width: 768px) {
+    nav {
+        padding: 20px 30px;
+    }
+
+    .logo {
+        font-size: 40px;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        width: 100%;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        background-color: white;
+        padding: 20px 0;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .burger-menu {
+        display: flex;
+    }
+}
+
   
 
   /* HOMEPAGE STYLES */
@@ -62,42 +118,45 @@ body {
   }
   
   .home-text h1 {
-    font-size: 82px;
+    font-size: 85px;
     color: #003049;
     font-weight: 800;
     margin-bottom: -10px;
     font-family: 'Teachers', sans-serif;
     position: relative;
-    top: -100px; /* Moves the heading upwards */
+    top: -200px; /* Moves the heading upwards */
 }
 
 .home-text p {
     color: #003049;
-    font-size: 18px;
-    line-height: 1.8;
+    font-size: 23px;
+    line-height: 1.9;
     position: relative;
-    top: -40px; /* Moves the paragraph upwards */
+    top: -130px; /* Moves the paragraph upwards */
 }
 
   
-  .home-image {
+.home-image {
     flex: 1;
     min-width: 300px;
     max-width: 45%;
     display: flex;
     justify-content: flex-end;
     align-items: flex-end; /* aligns image to bottom like your reference */
-  }
+    margin-top: 40px;  /* Move the image down by 20px (adjust this value as needed) */
+}
+
   
   .home-image img {
-    width: 78%;
- 
-    height: 200%;
+    width: 98%;
+    height: 800%;
     object-fit: cover;
-    margin-bottom: -2px;
-    margin-top: -235px;
+    margin-bottom: -8px;
+    margin-top: -420px;
     position: relative;
-    left: 99px; /* Moves the image to the right */
+    top: 1px;  /* Moves the image upward to overlap with the section above */
+    left: 100px; /* Moves the image to the right */
+    z-index: -1;  /* Keeps the image behind the content */
 }
 
   
@@ -107,8 +166,8 @@ body {
   
 
 
-  
-  .who-we-are {
+/* Who We Are Section Styles */
+.who-we-are {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -117,48 +176,401 @@ body {
     color: white;
     flex-wrap: wrap;
   }
-
+  
   .who-image {
     flex: 1;
     max-width: 45%;
   }
-
+  
   .who-image img {
     width: 100%;
     height: auto;
-    border-radius: 5px;
+    object-fit: cover;
+    position: relative;
+    top: -150px;
   }
-
+  
   .who-text {
     flex: 1;
     max-width: 50%;
     padding-left: 40px;
+    font-family: 'Teachers', sans-serif;
+    position: relative;
+    top: -70px;  /* Moves the text up */
   }
-
+  
   .who-text h2 {
-    font-size: 32px;
+    font-size: 85px;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    font-family: 'Teachers', sans-serif;
   }
-
+  
   .who-text p {
-    font-size: 16px;
+    font-size: 23px;
     line-height: 1.8;
+    font-family: 'Teachers', sans-serif;
   }
-
+  
   @media (max-width: 768px) {
-    .home-section, .who-we-are {
+    .who-we-are {
       flex-direction: column;
       padding: 40px;
     }
-
-    .home-text, .home-image, .who-text, .who-image {
+  
+    .who-image, .who-text {
       max-width: 100%;
       padding: 0;
     }
+  
+    .who-text {
+      padding-left: 0;
+      margin-top: 20px;
+      top: 0; /* Reset position for smaller screens */
+    }
+  
+    .who-image img {
+      top: 0;
+    }
+  }
+  
 
+
+
+
+
+
+  /* Who We Are Section Styles */
+.who-we-are {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 100px;
+    background: linear-gradient(to right, #5e90a9, #1c3b52);
+    color: white;
+    flex-wrap: wrap;
+  }
+  
+  .who-image {
+    flex: 1;
+    max-width: 45%;
+  }
+  
+  .who-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    position: relative;
+    top: -150px; /* Adjust as needed */
+  }
+  
+  .who-text {
+    flex: 1;
+    max-width: 50%;
+    padding-left: 40px;
+    font-family: 'Teachers', sans-serif;
+  }
+  
+  .who-text h2 {
+    font-size: 42px;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  
+  .who-text p {
+    font-size: 20px;
+    line-height: 1.8;
+  }
+  
+
+
+
+
+
+
+  /* Why Us Section Styles */
+  .why-us {
+    padding: 80px 100px;
+    background-color: #003049;
+    color: white;
+    font-family: 'Teachers', sans-serif;
+  }
+  
+  .why-us h2 {
+    font-size: 42px;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  
+  .why-us p {
+    font-size: 20px;
+    line-height: 1.8;
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 768px) {
+    .who-we-are, .why-us {
+      flex-direction: column;
+      padding: 40px;
+    }
+  
+    .who-text, .who-image, .why-us {
+      max-width: 100%;
+      padding: 0;
+    }
+  
     .who-text {
       padding-left: 0;
       margin-top: 20px;
     }
+  
+    .who-image img {
+      top: 0;
+    }
   }
+
+  
+
+
+  .why-us {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to right, #5e90a9, #1c3b52);
+    padding: 50px 0;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .why-image {
+    width: 450px;
+    height: auto;
+
+    object-fit: cover;
+  }
+  
+  .why-text {
+    flex: 1;
+    padding: 0 40px;
+    color: white;
+    transform: translateY(-70px); /* Move text up */
+  }
+  
+  .why-text h3 {
+    font-size: 2.8rem; /* Increased from 2rem */
+    font-weight: bold;
+    margin-bottom: 25px;
+  }
+  
+  .why-text p {
+    font-size: 1.4rem; /* Increased from 1.1rem */
+    line-height: 1.8;
+  }
+  .right-img {
+    transform: translateY(-90px); /* Move image up */
+  }
+
+
+
+
+
+
+
+  /* our project section */
+
+  .our-projects {
+    background: #fff;
+    text-align: left;
+  }
+  
+  .our-projects h2 {
+    font-size: 2.5rem;
+    color: #0c3b52;
+    margin-bottom: 40px;
+    padding-left: 10px;
+  }
+  
+  .project-gallery {
+    display: flex;
+    justify-content: space-between;
+    gap: 0; /* Removed the spacing between cards */
+    flex-wrap: wrap;
+  }
+  
+  .project-card {
+    width: 25%;
+    height: 900px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden; /* Important to keep overlay contained */
+  }
+  
+  .project-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0); /* Transparent initially */
+    transition: background-color 0.3s ease;
+    z-index: 1;
+  }
+  
+  .project-card:hover::before {
+    background-color: rgba(0, 0, 0, 0.4); /* Dim effect on hover */
+  }
+  
+  
+  
+  .project-text {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: white;
+    font-size: 1.4rem;
+    font-weight: bold;
+    line-height: 1.4;
+  }
+  
+
+   .center-text {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+
+
+
+
+
+
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .team-section {
+    padding: 60px 0;
+    background: linear-gradient(to right, #5e90a9, #1c3b52);
+    color: white;
+    width: 100%;
+  }
+  
+  .team-title {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 80px;
+  }
+  
+  .team-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    width: 100%;
+  }
+  
+  .team-member {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    padding: 0 60px;
+  }
+  
+  
+  .team-member.left1 {
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-left: 120px; /* Increase this value to push it more left */
+    padding-right: 60px;
+  }
+  
+  .team-member.right {
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    padding-right: 120px; /* Push closer to the right */
+    padding-left: 60px;
+  }
+  
+  .team-member.left2 {
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-left: 120px; /* Increase this value to push it more left */
+    padding-right: 60px;
+  }
+  .team-member.right2 {
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    padding-right: 120px; /* Push closer to the right */
+    padding-left: 60px;
+  }
+  
+
+
+
+
+
+
+
+
+
+ .avatar {
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  align-self: center; /* keeps it vertically centered */
+}
+  .member-text {
+    flex: 1;
+    max-width: 450px;
+  }
+  
+  .member-text.text-right {
+    text-align: right;
+  }
+  
+  .name {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 4px;
+  }
+  
+  .role {
+    font-size: 30px;
+    color: #ffffff;
+    margin-bottom: 12px;
+  }
+  
+  .desc {
+    font-size: 24px;
+    color: #ffffff;
+  }
+  
+  .line {
+    height: 2px;
+    background-color: white;
+    margin-top: 10px;
+    position: relative;
+  }
+  
+  .line .dot {
+    position: absolute;
+    top: -6px;
+    left: 0;
+    width: 12px;
+    height: 12px;
+    background-color: white;
+    border-radius: 50%;
+  }
+  
+  .line.align-right .dot {
+    left: auto;
+    right: 0;
+  }
+  
+  
