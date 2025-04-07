@@ -3,39 +3,95 @@ body {
     font-family: 'Teachers', sans-serif;
     margin: 0;
     padding: 0;
-  }
-  
-  nav {
+}
+
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 25px 100px;
     background-color: white;
-  }
-  
-  .logo {
-    font-size: 50px; 
+    position: relative;
+}
+
+.logo {
+    font-size: 50px;
     font-weight: 800;
     color: #00415A;
-  }
-  
-  .nav-links {
+}
+
+.nav-links {
     display: flex;
-    gap: 90px; 
-  }
-  
-  .nav-links a {
+    gap: 90px;
+}
+
+.nav-links a {
     text-decoration: none;
     color: #00415A;
     font-weight: 600;
-    font-size: 30px; 
+    font-size: 30px;
     transition: 0.2s ease-in-out;
-  }
-  
-  .nav-links a:hover {
+}
+
+.nav-links a:hover {
     text-decoration: underline;
-  }
-  
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+}
+
+/* Burger Menu Styles */
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.burger-menu span {
+    width: 30px;
+    height: 4px;
+    background-color: #00415A;
+    border-radius: 5px;
+}
+
+/* RESPONSIVE STYLES */
+@media screen and (max-width: 768px) {
+    nav {
+        padding: 20px 30px;
+    }
+
+    .logo {
+        font-size: 40px;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        width: 100%;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        background-color: white;
+        padding: 20px 0;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .burger-menu {
+        display: flex;
+    }
+}
+
   
 
   /* HOMEPAGE STYLES */
@@ -62,21 +118,21 @@ body {
   }
   
   .home-text h1 {
-    font-size: 82px;
+    font-size: 85px;
     color: #003049;
     font-weight: 800;
     margin-bottom: -10px;
     font-family: 'Teachers', sans-serif;
     position: relative;
-    top: -100px; /* Moves the heading upwards */
+    top: -200px; /* Moves the heading upwards */
 }
 
 .home-text p {
     color: #003049;
-    font-size: 18px;
-    line-height: 1.8;
+    font-size: 23px;
+    line-height: 1.9;
     position: relative;
-    top: -40px; /* Moves the paragraph upwards */
+    top: -130px; /* Moves the paragraph upwards */
 }
 
   
@@ -95,9 +151,11 @@ body {
     height: 200%;
     object-fit: cover;
     margin-bottom: -2px;
-    margin-top: -235px;
+    margin-top: -350px;
     position: relative;
     left: 99px; /* Moves the image to the right */
+    z-index: -1; /* Ensures the image is placed behind other elements */
+
 }
 
   

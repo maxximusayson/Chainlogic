@@ -1,7 +1,7 @@
 <?php include(APPPATH . 'Views/layout/header.php'); ?>
 
 <!-- Home Section -->
- <br><br><br> <br><br><br> 
+ <br><br><br> <br>
 <section class="home-section">
   <div class="home-text">
     <h1>Lorem Ipsum<br>dolor</h1>
