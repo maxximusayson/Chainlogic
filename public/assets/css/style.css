@@ -1,96 +1,108 @@
 /* NAVBAR STYLES */
 body {
-    font-family: 'Teachers', sans-serif;
-    margin: 0;
-    padding: 0;
+  font-family: 'Teachers', sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 25px 100px;
-    background-color: white;
-    position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 100px;
+  background-color: white;
+  position: relative;
 }
 
 .logo {
-    font-size: 50px;
-    font-weight: 800;
-    color: #00415A;
+  font-size: 50px;
+  font-weight: 800;
+  color: #00415A;
 }
 
 .nav-links {
-    display: flex;
-    gap: 90px;
+  display: flex;
+  gap: 90px;
+  transition: all 0.3s ease;
 }
 
 .nav-links a {
-    text-decoration: none;
-    color: #00415A;
-    font-weight: 600;
-    font-size: 30px;
-    transition: 0.2s ease-in-out;
+  text-decoration: none;
+  color: #00415A;
+  font-weight: 600;
+  position: relative;
+  font-size: 30px;
+  padding: 5px 0; 
+  transition: 0.2s ease-in-out;
 }
 
 .nav-links a:hover {
-    text-decoration: underline;
+  text-decoration: none;
+  color: #003049; /* Optional: match hover color to active */
+}
+
+/* ACTIVE LINK STYLES */
+.nav-links a.active-link {
+  color: #003049;
+  font-weight: 700;
+  border-bottom: 3px solid #003049;
 }
 
 .logo img {
-    width: 100px;
-    height: auto;
+  width: 100px;
+  height: auto;
 }
 
 /* Burger Menu Styles */
 .burger-menu {
-    display: none;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 30px;
-    height: 25px;
-    cursor: pointer;
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
 }
 
 .burger-menu span {
-    width: 30px;
-    height: 4px;
-    background-color: #00415A;
-    border-radius: 5px;
+  width: 30px;
+  height: 4px;
+  background-color: #00415A;
+  border-radius: 5px;
 }
 
 /* RESPONSIVE STYLES */
 @media screen and (max-width: 768px) {
-    nav {
-        padding: 20px 30px;
-    }
+  nav {
+      padding: 20px 30px;
+  }
 
-    .logo {
-        font-size: 40px;
-    }
+  .logo {
+      font-size: 40px;
+  }
 
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        gap: 20px;
-        align-items: center;
-        width: 100%;
-        position: absolute;
-        top: 80px;
-        left: 0;
-        background-color: white;
-        padding: 20px 0;
-        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
-    }
+  .nav-links {
+      display: none;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+      width: 100%;
+      position: absolute;
+      top: 80px;
+      left: 0;
+      background-color: white;
+      padding: 20px 0;
+      box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+  }
 
-    .nav-links.active {
-        display: flex;
-    }
+  .nav-links.active {
+      display: flex;
+  }
 
-    .burger-menu {
-        display: flex;
-    }
+  .burger-menu {
+      display: flex;
+  }
 }
+
 
   
 
@@ -175,7 +187,13 @@ nav {
     background: linear-gradient(to right, #5e90a9, #1c3b52);
     color: white;
     flex-wrap: wrap;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
   }
+  .who-we-are.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
   
   .who-image {
     flex: 1;
@@ -294,6 +312,13 @@ nav {
     background-color: #003049;
     color: white;
     font-family: 'Teachers', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 100px;
+    position: relative;
+    overflow: hidden;
   }
   
   .why-us h2 {
@@ -354,6 +379,7 @@ nav {
     padding: 0 40px;
     color: white;
     transform: translateY(-70px); /* Move text up */
+  
   }
   
   .why-text h3 {
@@ -370,6 +396,19 @@ nav {
     transform: translateY(-90px); /* Move image up */
   }
 
+  /* Slide-in animations */
+.left-img {
+  transform: translateX(-100px);
+}
+
+.right-img {
+  transform: translateX(100px);
+}
+
+.why-us.visible .why-image {
+  opacity: 1;
+  transform: translateX(0);
+}
 
 
 
@@ -445,132 +484,144 @@ nav {
 
 
 
-
   body {
+    font-family: 'Teachers', sans-serif;
     margin: 0;
-    font-family: 'Segoe UI', sans-serif;
+    padding: 0;
+    background-color: #f8f9fa;
   }
-  
+
   .team-section {
-    padding: 60px 0;
-    background: linear-gradient(to right, #5e90a9, #1c3b52);
-    color: white;
-    width: 100%;
-  }
-  
-  .team-title {
+    padding: 100px 20px;
     text-align: center;
-    font-size: 40px;
-    font-weight: 700;
+    background: linear-gradient(to right, #5e90a9, #1c3b52);
+  }
+
+  .team-title {
+    font-size: 50px;
+    font-weight: 800;
+    color: #ffffff;
     margin-bottom: 80px;
   }
-  
+
   .team-grid {
     display: flex;
     flex-direction: column;
     gap: 80px;
-    width: 100%;
+    align-items: center;
   }
-  
+
   .team-member {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 60px;
-    padding: 0 60px;
+    justify-content: space-between;
+    max-width: 1000px;
+    width: 100%;
+    gap: 40px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease-out;
   }
-  
-  
-  .team-member.left1 {
+
+  .team-member.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .team-member[data-index="1"] { transition-delay: 0.1s; }
+  .team-member[data-index="2"] { transition-delay: 0.2s; }
+  .team-member[data-index="3"] { transition-delay: 0.3s; }
+  .team-member[data-index="4"] { transition-delay: 0.4s; }
+
+  .left1, .left2 {
     flex-direction: row;
-    justify-content: flex-start;
-    padding-left: 120px; /* Increase this value to push it more left */
-    padding-right: 60px;
   }
-  
-  .team-member.right {
+
+  .right, .right2 {
     flex-direction: row-reverse;
-    justify-content: flex-start;
-    padding-right: 120px; /* Push closer to the right */
-    padding-left: 60px;
   }
-  
-  .team-member.left2 {
-    flex-direction: row;
-    justify-content: flex-start;
-    padding-left: 120px; /* Increase this value to push it more left */
-    padding-right: 60px;
+
+  .avatar {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
   }
-  .team-member.right2 {
-    flex-direction: row-reverse;
-    justify-content: flex-start;
-    padding-right: 120px; /* Push closer to the right */
-    padding-left: 60px;
-  }
-  
 
-
-
-
-
-
-
-
-
- .avatar {
-  width: 230px;
-  height: 230px;
-  border-radius: 50%;
-  object-fit: cover;
-  flex-shrink: 0;
-  align-self: center; /* keeps it vertically centered */
-}
   .member-text {
-    flex: 1;
-    max-width: 450px;
+    max-width: 500px;
+    text-align: left;
   }
-  
-  .member-text.text-right {
+
+  .text-right {
     text-align: right;
   }
-  
+
   .name {
-    font-size: 40px;
-    font-weight: bold;
-    margin-bottom: 4px;
+    font-size: 28px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 5px;
   }
-  
+
   .role {
-    font-size: 30px;
+    font-size: 20px;
     color: #ffffff;
-    margin-bottom: 12px;
+    margin-bottom: 15px;
   }
-  
+
   .desc {
-    font-size: 24px;
+    font-size: 16px;
     color: #ffffff;
+    line-height: 1.6;
   }
-  
+
   .line {
-    height: 2px;
-    background-color: white;
-    margin-top: 10px;
+    width: 100%;
+    height: 3px;
+    background-color: #eee;
+    margin-top: 15px;
     position: relative;
   }
-  
-  .line .dot {
-    position: absolute;
-    top: -6px;
-    left: 0;
-    width: 12px;
-    height: 12px;
-    background-color: white;
+
+  .dot {
+    width: 10px;
+    height: 10px;
+    background-color: #ffffff;
     border-radius: 50%;
+    position: absolute;
+    top: -4px;
+    left: 0;
   }
-  
-  .line.align-right .dot {
+
+  .align-right .dot {
     left: auto;
     right: 0;
   }
-  
+
+  @media screen and (max-width: 768px) {
+    .team-member {
+      flex-direction: column !important;
+      text-align: center;
+    }
+
+    .text-right {
+      text-align: center;
+    }
+
+    .avatar {
+      width: 150px;
+      height: 150px;
+    }
+
+    .member-text {
+      max-width: 100%;
+    }
+
+    .line {
+      display: none;
+    }
+  }
+
   

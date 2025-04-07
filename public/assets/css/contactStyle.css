@@ -6,7 +6,7 @@
 }
 
 body {
-    background: linear-gradient(330deg, rgba(4,78,105,1) 0%, rgba(124,176,193,1) 100%);
+    background: linear-gradient(to right, #5e90a9, #1c3b52);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;

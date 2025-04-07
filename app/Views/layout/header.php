@@ -13,10 +13,11 @@
     </div>
     <div class="nav-links">
       <a href="/">Home</a>
-      <a href="about">About</a>
-      <a href="services">Services</a>
-      <a href="contact">Contact</a>
+      <a href="/about">About</a>
+      <a href="/services">Services</a>
+      <a href="/contact">Contact</a>
     </div>
+
     <div class="burger-menu" id="burger-menu">
       <span></span>
       <span></span>
@@ -25,13 +26,25 @@
   </nav>
 
   <script>
-    // JavaScript to toggle the nav links visibility
+    // Toggle menu
     const burgerMenu = document.getElementById('burger-menu');
     const navLinks = document.querySelector('.nav-links');
 
     burgerMenu.addEventListener('click', () => {
       navLinks.classList.toggle('active');
     });
+
+    // Set active link based on URL
+    const currentPath = window.location.pathname;
+    const links = document.querySelectorAll('.nav-links a');
+
+    links.forEach(link => {
+      const href = link.getAttribute('href');
+      if (href === currentPath || (href === '/' && currentPath === '/index')) {
+        link.classList.add('active-link');
+      }
+    });
   </script>
 </body>
 </html>
+

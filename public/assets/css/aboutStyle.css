@@ -13,7 +13,7 @@
     justify-content: center;
     align-items: center;
     
-    background-color: #044E69;
+    background: linear-gradient(to right, #5e90a9, #1c3b52);
 }
 #containerAboutBox{
     display: flex;
