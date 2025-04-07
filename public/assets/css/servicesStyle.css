@@ -109,36 +109,3 @@
 }
 
 
-#containerAbout{
-    width: 100%;
-    height: 100vh;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    background-color: #044E69;
-}
-#containerAboutBox{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: auto;
-    gap: 40px;
-}
-
-#containerAboutLeft h1{
-    color: white;
-    font-size: 64px;
-}
-#containerAboutLeft p{
-    color: white;
-    font-size: 24px;
-    
-}
-
-#containerAboutRight img{
-    width: 696px;
-    height: 464px;
-    border-radius: 10px;
-}
