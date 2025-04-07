@@ -1,3 +1,4 @@
+/* NAVBAR STYLES */
 body {
     font-family: 'Teachers', sans-serif;
     margin: 0;
@@ -13,21 +14,21 @@ body {
   }
   
   .logo {
-    font-size: 50px; /* Increased from 28px */
+    font-size: 50px; 
     font-weight: 800;
     color: #00415A;
   }
   
   .nav-links {
     display: flex;
-    gap: 90px; /* More space between links */
+    gap: 90px; 
   }
   
   .nav-links a {
     text-decoration: none;
     color: #00415A;
     font-weight: 600;
-    font-size: 30px; /* Increased from 18px */
+    font-size: 30px; 
     transition: 0.2s ease-in-out;
   }
   
@@ -36,64 +37,128 @@ body {
   }
   
   
-  .main {
+
+  /* HOMEPAGE STYLES */
+  
+  body {
+    font-family: 'Teachers', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  .home-section {
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    padding: 50px;
+    padding: 80px 100px 0; /* remove bottom padding so image touches blue section */
     flex-wrap: wrap;
+    gap: 40px;
   }
   
-  .main-text {
+  .home-text {
     flex: 1;
     min-width: 300px;
     max-width: 50%;
   }
   
-  .main-text h1 {
-    font-size: 48px;
+  .home-text h1 {
+    font-size: 82px;
     color: #003049;
-    margin-bottom: 20px;
-  }
+    font-weight: 800;
+    margin-bottom: -10px;
+    font-family: 'Teachers', sans-serif;
+    position: relative;
+    top: -100px; /* Moves the heading upwards */
+}
+
+.home-text p {
+    color: #003049;
+    font-size: 18px;
+    line-height: 1.8;
+    position: relative;
+    top: -40px; /* Moves the paragraph upwards */
+}
+
   
-  .main-text p {
-    color: #333;
-    font-size: 16px;
-    line-height: 1.6;
-  }
-  
-  .main-img {
+  .home-image {
     flex: 1;
     min-width: 300px;
     max-width: 45%;
-  }
-  
-  .main-img img {
-    width: 100%;
-    border-radius: 5px;
-  }
-  
-  .section {
     display: flex;
-    padding: 50px;
+    justify-content: flex-end;
+    align-items: flex-end; /* aligns image to bottom like your reference */
+  }
+  
+  .home-image img {
+    width: 78%;
+ 
+    height: 200%;
+    object-fit: cover;
+    margin-bottom: -2px;
+    margin-top: -235px;
+    position: relative;
+    left: 99px; /* Moves the image to the right */
+}
+
+  
+  
+  
+  
+  
+
+
+  
+  .who-we-are {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 100px;
     background: linear-gradient(to right, #5e90a9, #1c3b52);
     color: white;
     flex-wrap: wrap;
   }
-  
-  .section img {
-    width: 300px;
+
+  .who-image {
+    flex: 1;
+    max-width: 45%;
+  }
+
+  .who-image img {
+    width: 100%;
     height: auto;
-    margin-right: 30px;
     border-radius: 5px;
   }
-  
-  .section-text h2 {
-    font-size: 28px;
+
+  .who-text {
+    flex: 1;
+    max-width: 50%;
+    padding-left: 40px;
+  }
+
+  .who-text h2 {
+    font-size: 32px;
     font-weight: bold;
+    margin-bottom: 20px;
   }
-  
-  .section-text p {
+
+  .who-text p {
     font-size: 16px;
-    line-height: 1.6;
+    line-height: 1.8;
   }
-  
+
+  @media (max-width: 768px) {
+    .home-section, .who-we-are {
+      flex-direction: column;
+      padding: 40px;
+    }
+
+    .home-text, .home-image, .who-text, .who-image {
+      max-width: 100%;
+      padding: 0;
+    }
+
+    .who-text {
+      padding-left: 0;
+      margin-top: 20px;
+    }
+  }
