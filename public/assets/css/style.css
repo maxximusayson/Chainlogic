@@ -155,7 +155,7 @@ nav {
     display: flex;
     justify-content: flex-end;
     align-items: flex-end; /* aligns image to bottom like your reference */
-    margin-top: 40px;  /* Move the image down by 20px (adjust this value as needed) */
+    margin-top: 0px;  /* Move the image down by 20px (adjust this value as needed) */
 }
 
   
