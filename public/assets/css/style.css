@@ -1,0 +1,99 @@
+body {
+    font-family: 'Teachers', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 100px;
+    background-color: white;
+  }
+  
+  .logo {
+    font-size: 50px; /* Increased from 28px */
+    font-weight: 800;
+    color: #00415A;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 90px; /* More space between links */
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #00415A;
+    font-weight: 600;
+    font-size: 30px; /* Increased from 18px */
+    transition: 0.2s ease-in-out;
+  }
+  
+  .nav-links a:hover {
+    text-decoration: underline;
+  }
+  
+  
+  .main {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    flex-wrap: wrap;
+  }
+  
+  .main-text {
+    flex: 1;
+    min-width: 300px;
+    max-width: 50%;
+  }
+  
+  .main-text h1 {
+    font-size: 48px;
+    color: #003049;
+    margin-bottom: 20px;
+  }
+  
+  .main-text p {
+    color: #333;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  .main-img {
+    flex: 1;
+    min-width: 300px;
+    max-width: 45%;
+  }
+  
+  .main-img img {
+    width: 100%;
+    border-radius: 5px;
+  }
+  
+  .section {
+    display: flex;
+    padding: 50px;
+    background: linear-gradient(to right, #5e90a9, #1c3b52);
+    color: white;
+    flex-wrap: wrap;
+  }
+  
+  .section img {
+    width: 300px;
+    height: auto;
+    margin-right: 30px;
+    border-radius: 5px;
+  }
+  
+  .section-text h2 {
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .section-text p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
