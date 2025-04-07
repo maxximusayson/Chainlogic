@@ -32,6 +32,43 @@
   </div>
 </section>
 
+<!-- Why Us Section -->
+<section class="why-us">
+  <img src="images/hm3.png" alt="Left Image" class="why-image left-img">
+
+  <div class="why-text">
+    <h3>Why us</h3>
+    <p>
+      Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+    </p>
+  </div>
+
+  <img src="images/hm4.png" alt="Right Image" class="why-image right-img">
+</section>
+
+
+
+<!-- Our Projects Section -->
+<section class="our-projects">
+<h2 class="center-text">Our Projects</h2>
+
+  <div class="project-gallery">
+  <div class="project-card" style="background-image: url('images/h1.png');">
+      <div class="project-text">LOREM IPSUM<br>DOLOR</div>
+    </div>
+    <div class="project-card" style="background-image: url('images/h2.png');">
+      <div class="project-text">LOREM IPSUM<br>DOLOR</div>
+    </div>
+    <div class="project-card" style="background-image: url('images/h3.png');">
+      <div class="project-text">LOREM IPSUM<br>DOLOR</div>
+    </div>
+    <div class="project-card" style="background-image: url('images/h4.png');">
+      <div class="project-text">LOREM IPSUM<br>DOLOR</div>
+    </div>
+  </div>
+</section>
+
+
 
 
 

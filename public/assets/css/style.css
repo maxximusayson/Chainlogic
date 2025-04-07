@@ -234,3 +234,207 @@ nav {
     }
   }
   
+
+
+
+
+
+
+  /* Who We Are Section Styles */
+.who-we-are {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 100px;
+    background: linear-gradient(to right, #5e90a9, #1c3b52);
+    color: white;
+    flex-wrap: wrap;
+  }
+  
+  .who-image {
+    flex: 1;
+    max-width: 45%;
+  }
+  
+  .who-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    position: relative;
+    top: -150px; /* Adjust as needed */
+  }
+  
+  .who-text {
+    flex: 1;
+    max-width: 50%;
+    padding-left: 40px;
+    font-family: 'Teachers', sans-serif;
+  }
+  
+  .who-text h2 {
+    font-size: 42px;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  
+  .who-text p {
+    font-size: 20px;
+    line-height: 1.8;
+  }
+  
+
+
+
+
+
+
+  /* Why Us Section Styles */
+  .why-us {
+    padding: 80px 100px;
+    background-color: #003049;
+    color: white;
+    font-family: 'Teachers', sans-serif;
+  }
+  
+  .why-us h2 {
+    font-size: 42px;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  
+  .why-us p {
+    font-size: 20px;
+    line-height: 1.8;
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 768px) {
+    .who-we-are, .why-us {
+      flex-direction: column;
+      padding: 40px;
+    }
+  
+    .who-text, .who-image, .why-us {
+      max-width: 100%;
+      padding: 0;
+    }
+  
+    .who-text {
+      padding-left: 0;
+      margin-top: 20px;
+    }
+  
+    .who-image img {
+      top: 0;
+    }
+  }
+
+  
+
+
+  .why-us {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to right, #5e90a9, #1c3b52);
+    padding: 50px 0;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .why-image {
+    width: 450px;
+    height: auto;
+
+    object-fit: cover;
+  }
+  
+  .why-text {
+    flex: 1;
+    padding: 0 40px;
+    color: white;
+    transform: translateY(-70px); /* Move text up */
+  }
+  
+  .why-text h3 {
+    font-size: 2.8rem; /* Increased from 2rem */
+    font-weight: bold;
+    margin-bottom: 25px;
+  }
+  
+  .why-text p {
+    font-size: 1.4rem; /* Increased from 1.1rem */
+    line-height: 1.8;
+  }
+  .right-img {
+    transform: translateY(-90px); /* Move image up */
+  }
+
+
+
+
+
+
+
+  /* our project section */
+
+  .our-projects {
+    background: #fff;
+    text-align: left;
+  }
+  
+  .our-projects h2 {
+    font-size: 2.5rem;
+    color: #0c3b52;
+    margin-bottom: 40px;
+    padding-left: 10px;
+  }
+  
+  .project-gallery {
+    display: flex;
+    justify-content: space-between;
+    gap: 0; /* Removed the spacing between cards */
+    flex-wrap: wrap;
+  }
+  
+  .project-card {
+    width: 25%;
+    height: 900px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden; /* Important to keep overlay contained */
+  }
+  
+  .project-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0); /* Transparent initially */
+    transition: background-color 0.3s ease;
+    z-index: 1;
+  }
+  
+  .project-card:hover::before {
+    background-color: rgba(0, 0, 0, 0.4); /* Dim effect on hover */
+  }
+  
+  
+  
+  .project-text {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: white;
+    font-size: 1.4rem;
+    font-weight: bold;
+    line-height: 1.4;
+  }
+  
+
+   .center-text {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
