@@ -438,3 +438,139 @@ nav {
     justify-content: center;
     align-items: center;
   }
+
+
+
+
+
+
+
+
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .team-section {
+    padding: 60px 0;
+    background: linear-gradient(to right, #5e90a9, #1c3b52);
+    color: white;
+    width: 100%;
+  }
+  
+  .team-title {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 80px;
+  }
+  
+  .team-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    width: 100%;
+  }
+  
+  .team-member {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    padding: 0 60px;
+  }
+  
+  
+  .team-member.left1 {
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-left: 120px; /* Increase this value to push it more left */
+    padding-right: 60px;
+  }
+  
+  .team-member.right {
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    padding-right: 120px; /* Push closer to the right */
+    padding-left: 60px;
+  }
+  
+  .team-member.left2 {
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-left: 120px; /* Increase this value to push it more left */
+    padding-right: 60px;
+  }
+  .team-member.right2 {
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    padding-right: 120px; /* Push closer to the right */
+    padding-left: 60px;
+  }
+  
+
+
+
+
+
+
+
+
+
+ .avatar {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  align-self: center; /* keeps it vertically centered */
+}
+  .member-text {
+    flex: 1;
+    max-width: 450px;
+  }
+  
+  .member-text.text-right {
+    text-align: right;
+  }
+  
+  .name {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 4px;
+  }
+  
+  .role {
+    font-size: 14px;
+    color: #ffffff;
+    margin-bottom: 12px;
+  }
+  
+  .desc {
+    font-size: 14px;
+    color: #ffffff;
+  }
+  
+  .line {
+    height: 2px;
+    background-color: white;
+    margin-top: 10px;
+    position: relative;
+  }
+  
+  .line .dot {
+    position: absolute;
+    top: -6px;
+    left: 0;
+    width: 12px;
+    height: 12px;
+    background-color: white;
+    border-radius: 50%;
+  }
+  
+  .line.align-right .dot {
+    left: auto;
+    right: 0;
+  }
+  
+  

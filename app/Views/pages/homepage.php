@@ -71,6 +71,79 @@
 
 
 
+<br><br><br>
+
+<section class="team-section">
+  <h2 class="team-title">Our Team</h2>
+
+  <div class="team-grid">
+    <!-- Member Left -->
+    <div class="team-member left1">
+      <div class="member-text">
+        <h3 class="name">Mathew Mat</h3>
+        <p class="role">Developer</p>
+        <p class="desc">
+          Nemoenim ipsam voluptatem quia voluptassitaspernaturaut
+        </p>
+        <div class="line"><span class="dot"></span></div>
+      </div>
+      <img src="images/hm2.png" alt="Mathew Mat" class="avatar" />
+    </div>
+
+     <!-- Member Right -->
+     <div class="team-member right">
+      <div class="member-text text-right">
+        <h3 class="name">Mathew Mat</h3>
+        <p class="role">Developer</p>
+        <p class="desc">
+          Nemoenim ipsam voluptatem quia voluptassitaspernaturaut
+        </p>
+        <div class="line align-right"><span class="dot"></span></div>
+      </div>
+      <img src="images/hm2.png" alt="Mathew Mat" class="avatar" />
+    </div>
+  </div>
+
+<br><br><br><br>
+  <!-- Member Left -->
+  <div class="team-member left2">
+      <div class="member-text">
+        <h3 class="name">Mathew Mat</h3>
+        <p class="role">Developer</p>
+        <p class="desc">
+          Nemoenim ipsam voluptatem quia voluptassitaspernaturaut
+        </p>
+        <div class="line"><span class="dot"></span></div>
+      </div>
+      <img src="images/hm2.png" alt="Mathew Mat" class="avatar" />
+    </div>
+   
+    <br><br><br><br>
+     <!-- Member Right -->
+     <div class="team-member right2">
+      <div class="member-text text-right">
+        <h3 class="name">Mathew Mat</h3>
+        <p class="role">Developer</p>
+        <p class="desc">
+          Nemoenim ipsam voluptatem quia voluptassitaspernaturaut
+        </p>
+        <div class="line align-right"><span class="dot"></span></div>
+      </div>
+      <img src="images/hm2.png" alt="Mathew Mat" class="avatar" />
+    </div>
+  </div>
+
+
+
+
+
+
+
+</section>
+
+
+
+
 
 </body>
 </html>
