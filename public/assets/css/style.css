@@ -166,8 +166,8 @@ nav {
   
 
 
-  
-  .who-we-are {
+/* Who We Are Section Styles */
+.who-we-are {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -176,50 +176,61 @@ nav {
     color: white;
     flex-wrap: wrap;
   }
-
+  
   .who-image {
     flex: 1;
     max-width: 45%;
   }
-
+  
   .who-image img {
-    width: 100%;  /* Ensure the image covers the entire container width */
-    height: auto;  /* Adjust height to maintain aspect ratio */
-    object-fit: cover;  /* Ensures the image covers the area */
-    position: relative;  /* Allows positioning relative to its parent */
-    top: -150px;  /* Move the image up by 50px (adjust as needed) */
-}
-
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    position: relative;
+    top: -150px;
+  }
+  
   .who-text {
     flex: 1;
     max-width: 50%;
     padding-left: 40px;
+    font-family: 'Teachers', sans-serif;
+    position: relative;
+    top: -70px;  /* Moves the text up */
   }
-
+  
   .who-text h2 {
-    font-size: 32px;
+    font-size: 85px;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    font-family: 'Teachers', sans-serif;
   }
-
+  
   .who-text p {
-    font-size: 16px;
+    font-size: 23px;
     line-height: 1.8;
+    font-family: 'Teachers', sans-serif;
   }
-
+  
   @media (max-width: 768px) {
-    .home-section, .who-we-are {
+    .who-we-are {
       flex-direction: column;
       padding: 40px;
     }
-
-    .home-text, .home-image, .who-text, .who-image {
+  
+    .who-image, .who-text {
       max-width: 100%;
       padding: 0;
     }
-
+  
     .who-text {
       padding-left: 0;
       margin-top: 20px;
+      top: 0; /* Reset position for smaller screens */
+    }
+  
+    .who-image img {
+      top: 0;
     }
   }
+  

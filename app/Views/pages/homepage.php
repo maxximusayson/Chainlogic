@@ -1,4 +1,5 @@
 <?php include(APPPATH . 'Views/layout/header.php'); ?>
+<link href="https://fonts.googleapis.com/css2?family=Teachers&display=swap" rel="stylesheet">
 
 <!-- Home Section -->
 <br><br>
@@ -17,19 +18,20 @@
 </section>
 
 
-  <!-- Who We Are Section -->
-  <section class="who-we-are">
-    <div class="who-image">
-      <img src="images/hm2.png" alt="City Image">
-    </div>
-    <div class="who-text">
-      <h2>Who we are</h2>
-      <p>
-        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-        totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-      </p>
-    </div>
-  </section>
+<!-- Who We Are Section -->
+<section class="who-we-are">
+  <div class="who-image">
+    <img src="images/hm2.png" alt="City Image">
+  </div>
+  <div class="who-text">
+    <h2>Who We Are</h2>
+    <p>
+      Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+      totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+    </p>
+  </div>
+</section>
+
 
 
 
