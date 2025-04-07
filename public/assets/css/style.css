@@ -136,26 +136,27 @@ nav {
 }
 
   
-  .home-image {
+.home-image {
     flex: 1;
     min-width: 300px;
     max-width: 45%;
     display: flex;
     justify-content: flex-end;
     align-items: flex-end; /* aligns image to bottom like your reference */
-  }
+    margin-top: 40px;  /* Move the image down by 20px (adjust this value as needed) */
+}
+
   
   .home-image img {
-    width: 78%;
- 
-    height: 200%;
+    width: 98%;
+    height: 800%;
     object-fit: cover;
-    margin-bottom: -2px;
-    margin-top: -350px;
+    margin-bottom: -8px;
+    margin-top: -420px;
     position: relative;
-    left: 99px; /* Moves the image to the right */
-    z-index: -1; /* Ensures the image is placed behind other elements */
-
+    top: 1px;  /* Moves the image upward to overlap with the section above */
+    left: 100px; /* Moves the image to the right */
+    z-index: -1;  /* Keeps the image behind the content */
 }
 
   
@@ -182,10 +183,12 @@ nav {
   }
 
   .who-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-  }
+    width: 100%;  /* Ensure the image covers the entire container width */
+    height: auto;  /* Adjust height to maintain aspect ratio */
+    object-fit: cover;  /* Ensures the image covers the area */
+    position: relative;  /* Allows positioning relative to its parent */
+    top: -150px;  /* Move the image up by 50px (adjust as needed) */
+}
 
   .who-text {
     flex: 1;
