@@ -14,11 +14,7 @@ nav {
   position: relative;
 }
 
-.logo {
-  font-size: 50px;
-  font-weight: 800;
-  color: #00415A;
-}
+
 
 .nav-links {
   display: flex;
