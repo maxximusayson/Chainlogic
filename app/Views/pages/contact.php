@@ -11,6 +11,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Teachers:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 </head>
 
 <body>
@@ -41,7 +43,7 @@
 
     <!--Toast Message-->
     <?php if (session()->getFlashdata('success') || session()->getFlashdata('error')): ?>
-        <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+        <div class="position-fixed bottom-0 end-0 p-3 bg-primary" style="z-index: 11">
             <div id="contactToast" class="toast align-items-center text-bg-<?= session()->getFlashdata('success') ? 'success' : 'danger' ?> border-0 show" role="alert" aria-live="assertive" aria-atomic="true">
                 <div class="d-flex">
                     <div class="toast-body">
@@ -52,7 +54,23 @@
             </div>
         </div>
     <?php endif; ?>
-    
+
+
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const toastEl = document.getElementById('contactToast');
+            if (toastEl) {
+                const toast = new bootstrap.Toast(toastEl, {
+                    delay: 3000, // Auto-hide after 3 seconds
+                    autohide: true
+                });
+                toast.show();
+            }
+        });
+    </script>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
