@@ -43,7 +43,7 @@
 
     <!--Toast Message-->
     <?php if (session()->getFlashdata('success') || session()->getFlashdata('error')): ?>
-        <div class="position-fixed bottom-0 end-0 p-3 bg-primary" style="z-index: 11">
+        <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
             <div id="contactToast" class="toast align-items-center text-bg-<?= session()->getFlashdata('success') ? 'success' : 'danger' ?> border-0 show" role="alert" aria-live="assertive" aria-atomic="true">
                 <div class="d-flex">
                     <div class="toast-body">
