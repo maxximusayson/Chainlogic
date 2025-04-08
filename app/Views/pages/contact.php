@@ -9,12 +9,12 @@
     <title>Contact Us</title>
     <link rel="stylesheet" href="<?= base_url('/assets/css/contactStyle.css'); ?>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Teachers:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Teachers:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    
+
     <div class="contact-section m-0 p-0">
         <div class="map-container m-0 p-0">
             <img src="<?= base_url('images/ContactImages/map.png'); ?>" alt="Location Map">
@@ -28,7 +28,7 @@
                     <p>Phone Number:</p>
                     <p>Email:</p>
                 </div>
-                <form class="contact-form" action="#" method="post">
+                <form class="contact-form" action="<?= base_url('contact/create'); ?>" method="post">
                     <input type="text" name="name" placeholder="Enter your name" required>
                     <input type="email" name="email" placeholder="Email Address" required>
                     <textarea name="message" placeholder="Enter message" required></textarea>
@@ -36,8 +36,23 @@
                 </form>
             </div>
         </div>
-
     </div>
+
+
+    <!--Toast Message-->
+    <?php if (session()->getFlashdata('success') || session()->getFlashdata('error')): ?>
+        <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+            <div id="contactToast" class="toast align-items-center text-bg-<?= session()->getFlashdata('success') ? 'success' : 'danger' ?> border-0 show" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="d-flex">
+                    <div class="toast-body">
+                        <?= session()->getFlashdata('success') ?: session()->getFlashdata('error') ?>
+                    </div>
+                    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+            </div>
+        </div>
+    <?php endif; ?>
+    
 </body>
 
 </html>

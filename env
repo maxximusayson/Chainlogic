@@ -38,6 +38,16 @@
 # database.default.DBPrefix =
 # database.default.port = 3306
 
+EMAIL_PROTOCOL = smtp
+EMAIL_SMTP_HOST = smtp.gmail.com
+EMAIL_SMTP_USER = jeneallevalenin@gmail.com
+EMAIL_SMTP_PASS = bmoduppzurvrydwc
+EMAIL_SMTP_PORT = 587
+EMAIL_SMTP_CRYPTO = tls
+EMAIL_FROM_EMAIL = jeneallevalenin@gmail.com
+EMAIL_FROM_NAME = jenealle Jimena
+EMAIL_MAIL_TYPE = html
+
 # If you use MySQLi as tests, first update the values of Config\Database::$tests.
 # database.tests.hostname = localhost
 # database.tests.database = ci4_test
