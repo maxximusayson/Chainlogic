@@ -1,5 +1,64 @@
 <?php include(APPPATH . 'Views/layout/header.php'); ?>
+
 <link href="https://fonts.googleapis.com/css2?family=Teachers&display=swap" rel="stylesheet">
+
+
+<!-- Loader -->
+<div id="loader">
+  <img src="<?= base_url('images/logo.png') ?>" alt="Logo" class="loader-logo">
+  <div class="spinner"></div>
+</div>
+<style>
+  /* Fullscreen Loader Container */
+  #loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #588FA6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 1;
+    transition: opacity 0.7s ease;
+  }
+
+  /* Logo styling */
+  .loader-logo {
+    width: 120px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  /* Spinner style */
+  .spinner {
+    border: 6px solid rgba(255, 255, 255, 0.3);
+    border-top: 6px solid white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+</style>
+<script>
+  // Fade out the loader after 5 seconds
+  setTimeout(() => {
+    const loader = document.getElementById('loader');
+    loader.style.opacity = '0';
+    setTimeout(() => {
+      loader.style.display = 'none';
+    }, 700); // match the CSS transition duration
+  }, 3000);
+</script>
 
 <!-- Home Section -->
 <br><br>
@@ -182,4 +241,5 @@
 
 
 </body>
+
 </html>
